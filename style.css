@@ -21,7 +21,7 @@ html{
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#fff;
-    color:#1a1a1a;
+    color:#60599c;
     overflow-x:hidden;
 }
 
@@ -216,7 +216,7 @@ a{ font-family:inherit; }
     letter-spacing:-.01em;
     margin-bottom:6px;
 }
-.hero-text h1 span{ color:var(--red); }
+.hero-text h1 span{ color:#BF0F1E; }
 
 .hero-desc{
     color:rgba(255,255,255,.8);
