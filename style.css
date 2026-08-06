@@ -33,6 +33,7 @@ a{ font-family:inherit; }
     max-width:1300px;
     margin:auto;
     padding:0 40px;
+    padding-bottom:20px;
 }
 
 
@@ -350,6 +351,7 @@ a{ font-family:inherit; }
 
 /* ============ Carousel shell ============ */
 .carousel{
+
     position:relative;
     display:flex;
     align-items:center;
