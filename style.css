@@ -188,6 +188,26 @@ a{ font-family:inherit; }
     background:rgba(255,255,255,.06);
 }
 
+.btn-outline-dark{
+    display:inline-block;
+    background:transparent;
+    color:var(--navy);
+    text-decoration:none;
+    padding:15px 26px;
+    border-radius:6px;
+    border:1.5px solid #c7cddb;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+    transition:.3s;
+}
+.btn-outline-dark:hover{
+    border-color:var(--navy);
+    background:var(--navy);
+    color:#fff;
+}
+
 .btn-small{
     padding:10px 18px;
     font-size:12px;
@@ -353,13 +373,33 @@ a{ font-family:inherit; }
 .arrow:hover{ background:var(--red); }
 
 .cards{
-    display:grid;
+    display:flex;
     gap:22px;
     flex:1;
-    overflow:hidden;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
 }
-.cards-4{ grid-template-columns:repeat(4,1fr); }
-.cards-6{ grid-template-columns:repeat(6,1fr); }
+.cards::-webkit-scrollbar{ display:none; }
+.cards > *{ scroll-snap-align:start; }
+.cards-4 > *{ flex:0 0 calc(25% - 16.5px); min-width:220px; }
+.cards-5 > *{ flex:0 0 calc(20% - 17.6px); min-width:130px; }
+.cards-static{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    overflow:visible;
+    scroll-snap-type:none;
+}
+.cards-static > *{ scroll-snap-align:none; }
+
+.arrow:disabled{
+    opacity:.35;
+    cursor:default;
+    background:var(--navy);
+}
+.arrow:disabled:hover{ background:var(--navy); }
 
 .dots{
     display:flex;
@@ -489,6 +529,94 @@ a{ font-family:inherit; }
     border-radius:10px;
 }
 
+/* ============ Saúde / Especialistas ============ */
+.saude{
+    background:var(--navy);
+    padding:70px 0;
+}
+.saude-container{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:60px;
+    align-items:center;
+}
+.saude-img{
+    aspect-ratio:16/11;
+    border-radius:16px;
+    overflow:hidden;
+}
+.saude-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:16px;
+}
+.eyebrow-line{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    color:var(--red);
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+.eyebrow-line .line{
+    height:2px;
+    width:40px;
+    background:var(--red);
+    display:inline-block;
+}
+.saude-text h2{
+    color:#fff;
+    font-size:36px;
+    font-weight:900;
+    line-height:1.2;
+    margin-bottom:18px;
+}
+.saude-text h2 span{ color:var(--red); }
+.saude-text p{
+    color:rgba(255,255,255,.8);
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+.saude-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+/* ============ Patrocinadores ============ */
+.patrocinadores{
+    background:#fff;
+    padding:60px 0 70px;
+}
+.cards-5{ align-items:center; }
+.sponsor-logo{
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f6f7fb;
+    border:1px solid #ececec;
+    border-radius:10px;
+    padding:14px;
+    color:var(--text-muted);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    filter:grayscale(100%);
+    opacity:.85;
+    transition:.3s;
+}
+.sponsor-logo:hover{
+    filter:grayscale(0%);
+    opacity:1;
+}
+
 /* ============ Info / Planos ============ */
 .info-planos{
     background:var(--gray-bg);
@@ -530,14 +658,47 @@ a{ font-family:inherit; }
 }
 .plan{
     background:#fff;
-    border:1px solid #e4e7ee;
+    border:2px solid #e4e7ee;
     border-radius:12px;
     padding:24px 20px;
     position:relative;
+    cursor:pointer;
+    transition:.25s ease;
+}
+.plan:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(11,30,61,.1);
 }
 .plan-featured{
     border-color:var(--red);
     box-shadow:0 10px 26px rgba(198,0,0,.14);
+}
+.plan-check{
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    border:2px solid #d8dde6;
+    background:#fff;
+    color:transparent;
+    font-size:13px;
+    font-weight:900;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.2s;
+}
+.plan.selected{
+    border-color:var(--red);
+    box-shadow:0 12px 28px rgba(198,0,0,.22);
+    transform:translateY(-3px);
+}
+.plan.selected .plan-check{
+    background:var(--red);
+    border-color:var(--red);
+    color:#fff;
 }
 .badge{
     position:absolute;
@@ -557,6 +718,7 @@ a{ font-family:inherit; }
     font-size:17px;
     font-weight:800;
     margin-bottom:6px;
+    padding-right:24px;
 }
 .plan-freq{
     color:var(--red);
@@ -571,9 +733,23 @@ a{ font-family:inherit; }
     margin-bottom:18px;
     min-height:38px;
 }
+.planos-cta{
+    background:#fff;
+    border:1px solid #e4e7ee;
+    border-radius:12px;
+    padding:18px 20px;
+}
 .planos-note{
-    font-size:12px;
+    font-size:13px;
     color:var(--text-muted);
+    margin:0;
+}
+.planos-note strong{ color:var(--navy); }
+.planos-cta-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:14px;
 }
 
 /* ============ Footer ============ */
@@ -634,9 +810,10 @@ a{ font-family:inherit; }
 /* ============ Responsive ============ */
 @media (max-width: 1080px){
     .menu{ display:none; }
-    .cards-4{ grid-template-columns:repeat(2,1fr); }
+    .cards-4 > *{ flex:0 0 calc(50% - 11px); }
     .cards-6{ grid-template-columns:repeat(3,1fr); }
-    .hero-container, .welcome-container{ grid-template-columns:1fr; }
+    .cards-5 > *{ flex:0 0 calc(33.33% - 14.6px); }
+    .hero-container, .welcome-container, .saude-container{ grid-template-columns:1fr; }
     .info-planos-container{ grid-template-columns:1fr; }
     .plans-grid{ grid-template-columns:1fr; }
     .footer-container{ grid-template-columns:1fr 1fr; }
@@ -646,7 +823,9 @@ a{ font-family:inherit; }
     .container{ padding:0 20px; }
     .hero{ padding-top:120px; }
     .hero-text h1{ font-size:30px; }
-    .cards-4, .cards-6{ grid-template-columns:1fr 1fr; }
+    .saude-text h2{ font-size:28px; }
+    .cards-4 > *, .cards-5 > *{ flex:0 0 calc(75% - 11px); }
+    .cards-6{ grid-template-columns:1fr 1fr; }
     .ebook-container{ flex-direction:column; text-align:center; }
     .footer-container{ grid-template-columns:1fr; }
 }

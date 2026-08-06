@@ -35,7 +35,7 @@
       <div class="container hero-container">
         <div class="hero-text">
           <p class="eyebrow eyebrow-light">O LOCAL IDEAL PARA</p>
-          <h1>DESCUBRIR O HYROX<br><span>E ENCARAR DESAFIOS.</span></h1>
+          <h1>DESCOBRIR O HYROX<br><span>E ENCARAR DESAFIOS.</span></h1>
           <p class="hashtag">#VemTreinarNoSãoJorge</p>
           <p class="hero-desc">Cross, HYROX, HIIT e Running.<br>Diferentes treinos para diferentes objetivos, níveis e momentos da vida.</p>
           <div class="hero-actions">
@@ -214,6 +214,44 @@
       </div>
     </section>
 
+    <!-- SAÚDE / ESPECIALISTAS -->
+    <section class="saude">
+      <div class="container saude-container">
+        <div class="saude-media">
+          <div class="saude-img">
+            <img src="/imgs/parceiros/foto_especialistas.png" alt="Equipe de especialistas parceiros do São Jorge Training Club" width="600" height="450">
+          </div>
+        </div>
+        <div class="saude-text">
+          <p class="eyebrow-line"><span class="line"></span>ATENDIMENTO PARA SAÚDE<span class="line"></span></p>
+          <h2>Conheça nossos<br><span>parceiros especialistas.</span></h2>
+          <p>No São Jorge, você conta com parceiros multidisciplinares prontos para cuidar da sua saúde, performance e bem-estar.</p>
+          <div class="saude-actions">
+            <a href="https://wa.me/5511975967226" target="_blank" rel="noopener" class="btn-primary">Agendar consulta →</a>
+            <a href="#" class="btn-outline">Conhecer nossos especialistas →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATROCINADORES -->
+    <section class="patrocinadores">
+      <div class="container">
+        <h3 class="section-title"><span class="line"></span>PATROCINADORES<span class="line"></span></h3>
+        <div class="carousel">
+          <button class="arrow arrow-left" aria-label="Anterior">‹</button>
+          <div class="cards cards-5">
+            <div class="sponsor-logo"><span>Logo 1</span></div>
+            <div class="sponsor-logo"><span>Logo 2</span></div>
+            <div class="sponsor-logo"><span>Logo 3</span></div>
+            <div class="sponsor-logo"><span>Logo 4</span></div>
+            <div class="sponsor-logo"><span>Logo 5</span></div>
+          </div>
+          <button class="arrow arrow-right" aria-label="Próximo">›</button>
+        </div>
+      </div>
+    </section>
+
     <!-- ONDE ESTAMOS + PLANOS -->
     <section class="info-planos" id="planos">
       <div class="container info-planos-container">
@@ -233,34 +271,41 @@
               <p>#####</p>
             </div>
           </div>
-          <a href="#" class="btn-outline btn-small">📍 Como chegar</a>
+          <a href="#" class="btn-outline-dark btn-small">📍 Como chegar</a>
         </div>
 
         <div class="planos">
           <p class="eyebrow">PLANOS</p>
           <p class="planos-desc">Escolha o plano que combina com você.</p>
           <div class="plans-grid">
-            <div class="plan">
+            <div class="plan" data-plan="Essencial" tabindex="0" role="button" aria-pressed="false">
+              <span class="plan-check">✓</span>
               <h4>Essencial</h4>
               <p class="plan-freq">#####</p>
               <p class="plan-desc">Opções de 1 modalidade ou todas as modalidades.</p>
-              <a href="https://wa.me/5511975967226" target="_blank" rel="noopener" class="btn-outline btn-small">Consultar valores</a>
             </div>
-            <div class="plan plan-featured">
+            <div class="plan plan-featured" data-plan="Premium" tabindex="0" role="button" aria-pressed="false">
               <span class="badge">Mais escolhido</span>
+              <span class="plan-check">✓</span>
               <h4>Premium</h4>
               <p class="plan-freq">#####</p>
               <p class="plan-desc">Opções de 1 modalidade ou todas as modalidades.</p>
-              <a href="https://wa.me/5511975967226" target="_blank" rel="noopener" class="btn-primary btn-small">Consultar valores</a>
             </div>
-            <div class="plan">
+            <div class="plan" data-plan="Performance" tabindex="0" role="button" aria-pressed="false">
+              <span class="plan-check">✓</span>
               <h4>Performance</h4>
               <p class="plan-freq">#####</p>
               <p class="plan-desc">Opções de 1 modalidade ou todas as modalidades.</p>
-              <a href="https://wa.me/5511975967226" target="_blank" rel="noopener" class="btn-outline btn-small">Consultar valores</a>
             </div>
           </div>
-          <p class="planos-note">Preencha seus dados para receber os valores e condições.</p>
+
+          <div class="planos-cta" id="planosCta">
+            <p class="planos-note" id="planosNote">Clique em um plano acima para escolher.</p>
+            <div class="planos-cta-actions" id="planosActions" hidden>
+              <a id="ctaPlano" href="#" target="_blank" rel="noopener" class="btn-primary btn-small">💬 Quero esse plano</a>
+              <a id="ctaAula" href="#" target="_blank" rel="noopener" class="btn-outline-dark btn-small">📅 Quero agendar uma aula</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -304,6 +349,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
 
   </body>
 </html>
