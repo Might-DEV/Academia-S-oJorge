@@ -55,7 +55,7 @@ a{ font-family:inherit; }
     border-radius:10px;
     overflow:hidden;
 }
-.img-placeholder span{ padding:0 12px; }
+.img-placeholder span{ padding:0 0px; }
 .img-placeholder small{ opacity:.7; font-size:10px; }
 
 .eyebrow{
