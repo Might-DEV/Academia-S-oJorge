@@ -17,7 +17,7 @@
           <img src="/imgs/logo_transparent.png" width="100" height="100" alt="São Jorge Training Club">
           <span class="logo-text">SÃO JORGE<br><em>TRAINING CLUB</em></span>
         </a>
-        <nav class="menu">
+        <nav class="menu" id="siteMenu">
           <a href="#inicio">Início</a>
           <a href="#sao-jorge">O São Jorge</a>
           <a href="#modalidades">Modalidades</a>
@@ -27,8 +27,14 @@
           <a href="#contato">Contato</a>
         </nav>
         <a href="https://wa.me/5511975967226" target="_blank" rel="noopener" class="btn-header">Agende uma aula →</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <!-- HERO -->
     <section class="hero" id="inicio">
@@ -374,9 +380,46 @@
           <a href="#">@saojorgetrainingclub</a>
         </div>
       </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Marlon Santos. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Marlon Santos · <a href="mailto:marlons960@gmail.com">marlons960@gmail.com</a></p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      // ===== Menu mobile (hambúrguer) =====
+      (() => {
+        const toggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('siteMenu');
+        const overlay = document.getElementById('menuOverlay');
+        if (!toggle || !menu) return;
+
+        const closeMenu = () => {
+          menu.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          overlay.classList.remove('active');
+          document.body.classList.remove('menu-locked');
+        };
+        const openMenu = () => {
+          menu.classList.add('open');
+          toggle.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+          overlay.classList.add('active');
+          document.body.classList.add('menu-locked');
+        };
+
+        toggle.addEventListener('click', () => {
+          menu.classList.contains('open') ? closeMenu() : openMenu();
+        });
+        overlay.addEventListener('click', closeMenu);
+        menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 1080) closeMenu();
+        });
+      })();
+    </script>
 
   </body>
 </html>
