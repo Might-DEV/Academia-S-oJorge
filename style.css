@@ -468,6 +468,19 @@ body.menu-locked{ overflow:hidden; }
 }
 .cards-static > *{ scroll-snap-align:none; }
 
+/* Variante para grids com menos itens que colunas (ex: 4 cards) -
+   centraliza o conjunto em vez de espalhar/alinhar à esquerda */
+.cards-static.cards-center{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:900px;
+    margin:0 auto;
+}
+.cards-static.cards-center > *{
+    flex:0 0 200px;
+}
+
 .arrow:disabled{
     opacity:.35;
     cursor:default;
@@ -564,7 +577,7 @@ body.menu-locked{ overflow:hidden; }
 .feature{ text-align:center; padding:0 6px; }
 .feature-icon{
     width:64px; height:64px;
-    margin:0 auto 16px;
+    margin:25px auto 16px;
     border-radius:50%;
     background:#fdeaea;
     display:flex;
