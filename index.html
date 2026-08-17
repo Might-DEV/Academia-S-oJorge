@@ -1,1241 +1,743 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description"
-        content="São Jorge Training Club - O local para descobrir o HYROX.">
+    <meta
+      name="description"
+      content="São Jorge Training Club - O local para descobrir o HYROX."
+    />
 
-    <meta name="keywords"
-        content="São Jorge Training Club, HYROX, treinamento, fitness, modalidades, planos, contato">
+    <meta
+      name="keywords"
+      content="São Jorge Training Club, HYROX, treinamento, fitness, modalidades, planos, contato"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>São Jorge Training Club</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- ================= HEADER ================= -->
 
-<!-- ================= HEADER ================= -->
-
-<header class="header">
-
-    <div class="container">
-
+    <header class="header">
+      <div class="container">
         <a href="#inicio" class="logo">
+          <img
+            src="imgs/logo_transparent.png"
+            class="logo-icon"
+            alt="São Jorge Training Club"
+          />
 
-            <img
-                src="imgs/logo_transparent.png"
-                class="logo-icon"
-                alt="São Jorge Training Club"
-            >
-
-            <span class="logo-text">
-                SÃO JORGE<br>
-                <em>TRAINING CLUB</em>
-            </span>
-
+          <span class="logo-text">
+            SÃO JORGE<br />
+            <em>TRAINING CLUB</em>
+          </span>
         </a>
 
         <nav class="menu" id="siteMenu">
+          <button type="button" id="menuCtaAula" class="menu-cta">
+            📅 Agende uma aula
+          </button>
 
-            <button
-                type="button"
-                id="menuCtaAula"
-                class="menu-cta"
-            >
-                📅 Agende uma aula
-            </button>
-
-            <a href="#inicio">Início</a>
-            <a href="#sao-jorge">O São Jorge</a>
-            <a href="#modalidades">Modalidades</a>
-            <a href="#diferenciais">Diferenciais</a>
-            <a href="#comunidade">Comunidade</a>
-            <a href="#planos">Planos</a>
-
+          <a href="#inicio">Início</a>
+          <a href="#sao-jorge">O São Jorge</a>
+          <a href="#modalidades">Modalidades</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#comunidade">Comunidade</a>
+          <a href="#planos">Planos</a>
         </nav>
 
-        <button
-            type="button"
-            id="headerCtaAula"
-            class="btn-header"
-        >
-            Agende uma aula →
+        <button type="button" id="headerCtaAula" class="btn-header">
+          Agende uma aula →
         </button>
 
         <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="siteMenu"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="siteMenu"
         >
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+      </div>
+    </header>
 
-    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-</header>
+    <!-- ================= HERO ================= -->
 
-<div class="menu-overlay" id="menuOverlay"></div>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="inicio">
-
-    <div class="container hero-container">
-
+    <section class="hero" id="inicio">
+      <div class="container hero-container">
         <div class="hero-text">
+          <p class="eyebrow eyebrow-light">O LOCAL IDEAL PARA</p>
 
-            <p class="eyebrow eyebrow-light">
-                O LOCAL IDEAL PARA
-            </p>
+          <h1>
+            DESCOBRIR O HYROX<br />
+            <span>E ENCARAR DESAFIOS.</span>
+          </h1>
 
-            <h1>
-                DESCOBRIR O HYROX<br>
-                <span>E ENCARAR DESAFIOS.</span>
-            </h1>
+          <p class="hashtag">#VemTreinarNoSãoJorge</p>
 
-            <p class="hashtag">
-                #VemTreinarNoSãoJorge
-            </p>
+          <p class="hero-desc">
+            Cross, HYROX, HIIT e Running.<br />
+            Diferentes treinos para diferentes objetivos, níveis e momentos da
+            vida.
+          </p>
 
-            <p class="hero-desc">
-                Cross, HYROX, HIIT e Running.<br>
-                Diferentes treinos para diferentes objetivos,
-                níveis e momentos da vida.
-            </p>
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/5511975967226"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary"
+            >
+              Agende sua aula experimental →
+            </a>
 
-            <div class="hero-actions">
-
-                <a
-                    href="https://wa.me/5511975967226"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn-primary"
-                >
-                    Agende sua aula experimental →
-                </a>
-
-                <a
-                    href="#modalidades"
-                    class="btn-outline"
-                >
-                    Conheça as modalidades
-                </a>
-
-            </div>
-
+            <a href="#modalidades" class="btn-outline">
+              Conheça as modalidades
+            </a>
+          </div>
         </div>
-
 
         <div class="hero-media">
-
-            <div class="img-placeholder hero-img">
-
-                <img
-                    src="imgs/imagemTop.png"
-                    alt="Alunos treinando em grupo"
-                    width="600"
-                    height="400"
-                >
-
-            </div>
-
+          <div class="img-placeholder hero-img">
+            <img
+              src="imgs/imagemTop.png"
+              alt="Alunos treinando em grupo"
+              width="600"
+              height="400"
+            />
+          </div>
         </div>
+      </div>
 
-    </div>
-
-
-    <a
+      <a
         href="https://wa.me/5511975967226"
         target="_blank"
         rel="noopener"
         class="whatsapp-float"
         aria-label="WhatsApp"
-    >
-
-        <svg
-            viewBox="0 0 24 24"
-            fill="#fff"
-            width="26"
-            height="26"
-        >
-
-            <path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.9-.2-.3.2-.3.5-1 .1-.2.1-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3Z"/>
-
+      >
+        <svg viewBox="0 0 24 24" fill="#fff" width="26" height="26">
+          <path
+            d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.9-.2-.3.2-.3.5-1 .1-.2.1-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3Z"
+          />
         </svg>
+      </a>
+    </section>
 
-    </a>
+    <!-- ================= BEM-VINDO ================= -->
 
-</section>
-
-
-<!-- ================= BEM-VINDO ================= -->
-
-<section class="welcome" id="sao-jorge">
-
-    <div class="container welcome-container">
-
+    <section class="welcome" id="sao-jorge">
+      <div class="container welcome-container">
         <div class="welcome-text">
+          <p class="eyebrow">BEM-VINDO AO</p>
 
-            <p class="eyebrow">
-                BEM-VINDO AO
-            </p>
+          <h2>
+            SÃO JORGE<br />
+            <span>TRAINING CLUB</span>
+          </h2>
 
-            <h2>
-                SÃO JORGE<br>
-                <span>TRAINING CLUB</span>
-            </h2>
-
-            <p>
-                O São Jorge Training Club é para quem quer ir além,
-                seja superar limites, buscar performance, sair do
-                sedentarismo, cuidar da saúde ou simplesmente encontrar
-                no treino um momento para desestressar e se sentir bem.
-                Reunimos diferentes modalidades, idades e objetivos
-                em um só lugar, onde cada pessoa pode encontrar seu
-                ritmo, seus desafios e uma comunidade para evoluir junto.
-            </p>
-
+          <p>
+            O São Jorge Training Club é para quem quer ir além, seja superar
+            limites, buscar performance, sair do sedentarismo, cuidar da saúde
+            ou simplesmente encontrar no treino um momento para desestressar e
+            se sentir bem. Reunimos diferentes modalidades, idades e objetivos
+            em um só lugar, onde cada pessoa pode encontrar seu ritmo, seus
+            desafios e uma comunidade para evoluir junto.
+          </p>
         </div>
-
 
         <div class="welcome-media">
+          <video autoplay muted loop playsinline width="100%" height="450">
+            <source src="videos/homemCross.mp4" type="video/mp4" />
 
-            <video
-                autoplay
-                muted
-                loop
-                playsinline
-                width="100%"
-                height="450"
-            >
-
-                <source
-                    src="videos/homemCross.mp4"
-                    type="video/mp4"
-                >
-
-                Seu navegador não suporta vídeos.
-
-            </video>
-
+            Seu navegador não suporta vídeos.
+          </video>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= MODALIDADES ================= -->
 
-</section>
-
-
-<!-- ================= MODALIDADES ================= -->
-
-<section class="modalidades" id="modalidades">
-
-    <div class="container">
-
+    <section class="modalidades" id="modalidades">
+      <div class="container">
         <h3 class="section-title">
-            <span class="line"></span>
-            MODALIDADES
-            <span class="line"></span>
+          <span class="line"></span>
+          MODALIDADES
+          <span class="line"></span>
         </h3>
 
-
         <div class="carousel">
-
-            <button
-                class="arrow arrow-left"
-                aria-label="Anterior"
-            >
-                ‹
-            </button>
-
-
-            <div class="cards cards-4">
-
-
-                <!-- CROSS -->
-
-                <article class="card">
-
-                    <div class="img-placeholder card-img">
-
-                        <img
-                            src="imgs/cross.png"
-                            alt="Treino Cross"
-                        >
-
-                    </div>
-
-                    <div class="card-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            width="20"
-                            height="20"
-                            fill="#fff"
-                        >
-
-                            <path d="M20.6 3.4a2 2 0 0 0-2.8 0l-2 2-1.4-1.4-1.4 1.4L14.4 7 7 14.4l-1.4-1.4-1.4 1.4L5.6 16l-2 2a2 2 0 1 0 2.8 2.8l2-2 1.4 1.4 1.4-1.4-1.4-1.4L17 9.6l1.4 1.4 1.4-1.4-1.4-1.4 2-2a2 2 0 0 0 0-2.8Z"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Cross</h4>
-
-                    <p>
-                        Treinos variados que combinam força,
-                        técnica e condicionamento.
-                    </p>
-
-                </article>
-
-
-                <!-- HYROX -->
-
-                <article class="card">
-
-                    <div class="img-placeholder card-img">
-
-                        <img
-                            src="imgs/imagemTop.png"
-                            alt="Treino Hyrox"
-                        >
-
-                    </div>
-
-                    <div class="card-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            width="20"
-                            height="20"
-                            fill="#fff"
-                        >
-
-                            <path d="M13 3 4 14h6l-1 7 9-11h-6l1-7Z"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Hyrox</h4>
-
-                    <p>
-                        Corrida e exercícios funcionais para desenvolver
-                        resistência e performance.
-                    </p>
-
-                </article>
-
-
-                <!-- HIIT -->
-
-                <article class="card">
-
-                    <div class="img-placeholder card-img">
-
-                        <span>HIIT</span>
-
-                    </div>
-
-                    <div class="card-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            width="20"
-                            height="20"
-                            fill="#fff"
-                        >
-
-                            <path d="M3 12h4l2-7 4 14 2-7h6"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>HIIT</h4>
-
-                    <p>
-                        Treinos dinâmicos e intensos para queimar
-                        calorias e melhorar o condicionamento.
-                    </p>
-
-                </article>
-
-
-                <!-- RUNNING -->
-
-                <article class="card">
-
-                    <div class="img-placeholder card-img">
-
-                        <span>Running</span>
-
-                    </div>
-
-                    <div class="card-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            width="20"
-                            height="20"
-                            fill="#fff"
-                        >
-
-                            <circle
-                                cx="17"
-                                cy="4"
-                                r="2"
-                            />
-
-                            <path d="M10 22l2-6 3 2 2 4M6 16l3-4 3 1 2-4-3-2-4 2"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Running</h4>
-
-                    <p>
-                        Da primeira corrida aos novos recordes.
-                        Treinamento para diferentes ritmos e objetivos.
-                    </p>
-
-                </article>
-
-            </div>
-
-
-            <button
-                class="arrow arrow-right"
-                aria-label="Próximo"
-            >
-                ›
-            </button>
-
+          <button class="arrow arrow-left" aria-label="Anterior">‹</button>
+
+          <div class="cards cards-4">
+            <!-- CROSS -->
+
+            <article class="card">
+              <div class="img-placeholder card-img">
+                <!--<img src="" alt="Treino Cross" /--->
+              </div>
+
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff">
+                  <path
+                    d="M20.6 3.4a2 2 0 0 0-2.8 0l-2 2-1.4-1.4-1.4 1.4L14.4 7 7 14.4l-1.4-1.4-1.4 1.4L5.6 16l-2 2a2 2 0 1 0 2.8 2.8l2-2 1.4 1.4 1.4-1.4-1.4-1.4L17 9.6l1.4 1.4 1.4-1.4-1.4-1.4 2-2a2 2 0 0 0 0-2.8Z"
+                  />
+                </svg>
+              </div>
+
+              <h4>Cross</h4>
+
+              <p>
+                Treinos variados que combinam força, técnica e condicionamento.
+              </p>
+            </article>
+
+            <!-- HYROX -->
+
+            <article class="card">
+              <div class="img-placeholder card-img">
+                <img src="imgs/imagemTop.png" alt="Treino Hyrox" />
+              </div>
+
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff">
+                  <path d="M13 3 4 14h6l-1 7 9-11h-6l1-7Z" />
+                </svg>
+              </div>
+
+              <h4>Hyrox</h4>
+
+              <p>
+                Corrida e exercícios funcionais para desenvolver resistência e
+                performance.
+              </p>
+            </article>
+
+            <!-- HIIT -->
+
+            <article class="card">
+              <div class="img-placeholder card-img">
+                <span>HIIT</span>
+              </div>
+
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff">
+                  <path d="M3 12h4l2-7 4 14 2-7h6" />
+                </svg>
+              </div>
+
+              <h4>HIIT</h4>
+
+              <p>
+                Treinos dinâmicos e intensos para queimar calorias e melhorar o
+                condicionamento.
+              </p>
+            </article>
+
+            <!-- RUNNING -->
+
+            <article class="card">
+              <div class="img-placeholder card-img">
+                <span>Running</span>
+              </div>
+
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff">
+                  <circle cx="17" cy="4" r="2" />
+
+                  <path d="M10 22l2-6 3 2 2 4M6 16l3-4 3 1 2-4-3-2-4 2" />
+                </svg>
+              </div>
+
+              <h4>Running</h4>
+
+              <p>
+                Da primeira corrida aos novos recordes. Treinamento para
+                diferentes ritmos e objetivos.
+              </p>
+            </article>
+          </div>
+
+          <button class="arrow arrow-right" aria-label="Próximo">›</button>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= EBOOK ================= -->
 
-</section>
-
-
-<!-- ================= EBOOK ================= -->
-
-<section class="ebook">
-
-    <div class="container ebook-container">
-
+    <section class="ebook">
+      <div class="container ebook-container">
         <div class="ebook-cover">
+          <div class="img-placeholder ebook-img">
+            <span>EBOOK</span>
 
-            <div class="img-placeholder ebook-img">
-
-                <span>EBOOK</span>
-
-                <small>
-                    MODALIDADES E HORÁRIOS
-                </small>
-
-            </div>
-
+            <small> MODALIDADES E HORÁRIOS </small>
+          </div>
         </div>
-
 
         <div class="ebook-text">
+          <p class="eyebrow eyebrow-light">
+            QUER CONHECER MELHOR NOSSOS TREINOS?
+          </p>
 
-            <p class="eyebrow eyebrow-light">
-                QUER CONHECER MELHOR NOSSOS TREINOS?
-            </p>
-
-            <p>
-                Baixe nosso ebook com os detalhes das modalidades
-                e grade de horários.
-            </p>
-
+          <p>
+            Baixe nosso ebook com os detalhes das modalidades e grade de
+            horários.
+          </p>
         </div>
 
+        <a href="#" class="btn-primary"> Baixar ebook ⬇ </a>
+      </div>
+    </section>
 
-        <a href="#" class="btn-primary">
-            Baixar ebook ⬇
-        </a>
+    <!-- ================= DIFERENCIAIS ================= -->
 
-    </div>
-
-</section>
-
-
-<!-- ================= DIFERENCIAIS ================= -->
-
-<section class="diferenciais" id="diferenciais">
-
-    <div class="container">
-
+    <section class="diferenciais" id="diferenciais">
+      <div class="container">
         <h3 class="section-title">
-            <span class="line"></span>
-            DIFERENCIAIS
-            <span class="line"></span>
+          <span class="line"></span>
+          DIFERENCIAIS
+          <span class="line"></span>
         </h3>
 
         <h2 class="section-heading">
-            Tem academia.
-            <span>E tem o São Jorge.</span>
+          Tem academia.
+          <span>E tem o São Jorge.</span>
         </h2>
 
-
         <div class="cards cards-6 cards-static">
+          <article class="feature">
+            <div class="feature-icon">👤</div>
 
-
-            <article class="feature">
-
-                <div class="feature-icon">👤</div>
-
-                <h4>
-                    Treino para todos os níveis
-                </h4>
-
-                <p>
-                    Do iniciante ao avançado.
-                    Aqui cada um encontra seu ritmo
-                    e evolui com segurança.
-                </p>
-
-            </article>
-
-
-            <article class="feature">
-
-                <div class="feature-icon">⚡</div>
-
-                <h4>
-                    Professores por perto
-                </h4>
-
-                <p>
-                    Orientação e acompanhamento para
-                    você treinar com mais confiança.
-                </p>
-
-            </article>
-
-
-            <article class="feature">
-
-                <div class="feature-icon">📈</div>
-
-                <h4>
-                    Várias modalidades
-                </h4>
-
-                <p>
-                    Cross, HYROX, HIIT e Running para
-                    variar seus treinos.
-                </p>
-
-            </article>
-
-
-            <article class="feature">
-
-                <div class="feature-icon">👥</div>
-
-                <h4>
-                    Comunidade de verdade
-                </h4>
-
-                <p>
-                    Aqui você conhece pessoas,
-                    compartilha desafios e comemora conquistas.
-                </p>
-
-            </article>
-
-
-            <article class="feature">
-
-                <div class="feature-icon">🔒</div>
-
-                <h4>
-                    Estrutura completa
-                </h4>
-
-                <p>
-                    Ambiente preparado para proporcionar
-                    qualidade, segurança e ótima experiência.
-                </p>
-
-            </article>
-
-
-            <article class="feature">
-
-                <div class="feature-icon">❤️</div>
-
-                <h4>
-                    Mais que performance
-                </h4>
-
-                <p>
-                    Treine para competir, cuidar da saúde,
-                    sair do sedentarismo ou aliviar o estresse.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= COMUNIDADE ================= -->
-
-<section class="comunidade" id="comunidade">
-
-    <div class="container">
-
-        <div class="comunidade-head">
-
-            <p
-                class="eyebrow eyebrow-light"
-                style="display:inline-block;"
-            >
-                NOSSA COMUNIDADE
-            </p>
-
-            <h2>
-                Quem treina junto<br>
-                evolui junto.
-            </h2>
-
-            <p
-                class="hashtag"
-                style="text-align:left;"
-            >
-                #VemTreinarNoSãoJorge
-            </p>
-
-        </div>
-
-
-        <div class="carousel">
-
-            <button
-                class="arrow arrow-left"
-                aria-label="Anterior"
-            >
-                ‹
-            </button>
-
-
-            <div class="cards cards-4">
-
-                <div class="img-placeholder comm-img">
-                    <span>foto: aula em grupo</span>
-                </div>
-
-                <div class="img-placeholder comm-img">
-                    <span>foto: comemoração</span>
-                </div>
-
-                <div class="img-placeholder comm-img">
-                    <span>foto: dupla de treino</span>
-                </div>
-
-                <div class="img-placeholder comm-img">
-                    <span>foto: equipe São Jorge</span>
-                </div>
-
-            </div>
-
-
-            <button
-                class="arrow arrow-right"
-                aria-label="Próximo"
-            >
-                ›
-            </button>
-
-        </div>
-
-
-        <div class="dots">
-
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PATROCINADORES ================= -->
-
-<section
-    class="patrocinadores"
-    id="patrocinadores"
->
-
-    <div class="container">
-
-        <h3 class="section-title">
-
-            <span class="line"></span>
-
-            PATROCINADORES
-
-            <span class="line"></span>
-
-        </h3>
-
-
-        <div class="carousel">
-
-            <button
-                class="arrow arrow-left"
-                aria-label="Anterior"
-            >
-                ‹
-            </button>
-
-
-            <div class="cards cards-5">
-
-
-                <div class="sponsor-logo">
-
-                    <img
-                        src="imgs/parceiros/crefisa.png"
-                        alt="Crefisa"
-                    >
-
-                </div>
-
-
-                <div class="sponsor-logo">
-
-                    <img
-                        src="imgs/parceiros/fischer-325x170.png"
-                        alt="Fischer"
-                    >
-
-                </div>
-
-
-                <div class="sponsor-logo">
-
-                    <img
-                        src="imgs/parceiros/hiperfarma-325x170.png"
-                        alt="Hiperfarma"
-                    >
-
-                </div>
-
-
-                <div class="sponsor-logo">
-
-                    <img
-                        src="imgs/parceiros/nupay-325x170.png"
-                        alt="Nupay"
-                    >
-
-                </div>
-
-
-                <div class="sponsor-logo">
-
-                    <img
-                        src="imgs/parceiros/starbucks.png"
-                        alt="Starbucks"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <button
-                class="arrow arrow-right"
-                aria-label="Próximo"
-            >
-                ›
-            </button>
-
-        </div>
-
-
-        <div class="patrocinadores-cta">
+            <h4>Treino para todos os níveis</h4>
 
             <p>
-                Quer sua marca aqui também?
+              Do iniciante ao avançado. Aqui cada um encontra seu ritmo e evolui
+              com segurança.
             </p>
+          </article>
 
-            <a
-                href="aderir-patrocinadores.html"
-                class="btn-primary"
-            >
-                Seja um patrocinador →
-            </a>
+          <article class="feature">
+            <div class="feature-icon">⚡</div>
 
+            <h4>Professores por perto</h4>
+
+            <p>
+              Orientação e acompanhamento para você treinar com mais confiança.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">📈</div>
+
+            <h4>Várias modalidades</h4>
+
+            <p>Cross, HYROX, HIIT e Running para variar seus treinos.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">👥</div>
+
+            <h4>Comunidade de verdade</h4>
+
+            <p>
+              Aqui você conhece pessoas, compartilha desafios e comemora
+              conquistas.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">🔒</div>
+
+            <h4>Estrutura completa</h4>
+
+            <p>
+              Ambiente preparado para proporcionar qualidade, segurança e ótima
+              experiência.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">❤️</div>
+
+            <h4>Mais que performance</h4>
+
+            <p>
+              Treine para competir, cuidar da saúde, sair do sedentarismo ou
+              aliviar o estresse.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMUNIDADE ================= -->
+
+    <section class="comunidade" id="comunidade">
+      <div class="container">
+        <div class="comunidade-head">
+          <p class="eyebrow eyebrow-light" style="display: inline-block">
+            NOSSA COMUNIDADE
+          </p>
+
+          <h2>
+            Quem treina junto<br />
+            evolui junto.
+          </h2>
+
+          <p class="hashtag" style="text-align: left">#VemTreinarNoSãoJorge</p>
         </div>
 
-    </div>
+        <div class="carousel">
+          <button class="arrow arrow-left" aria-label="Anterior">‹</button>
 
-</section>
-
-
-<!-- ================= PLANOS ================= -->
-
-<section
-    class="info-planos"
-    id="planos"
->
-
-    <div class="container info-planos-container">
-
-
-        <div
-            class="onde-estamos"
-            id="contato"
-        >
-
-            <p class="eyebrow">
-                ONDE ESTAMOS
-            </p>
-
-            <div class="info-item">
-
-                <span class="info-icon">📍</span>
-
-                <div>
-
-                    <strong>Endereço</strong>
-
-                    <p>#####</p>
-
-                </div>
-
+          <div class="cards cards-4">
+            <div class="img-placeholder comm-img">
+              <span>foto: aula em grupo</span>
             </div>
 
-
-            <div class="info-item">
-
-                <span class="info-icon">🕒</span>
-
-                <div>
-
-                    <strong>Horários</strong>
-
-                    <p>#####</p>
-
-                </div>
-
+            <div class="img-placeholder comm-img">
+              <span>foto: comemoração</span>
             </div>
 
+            <div class="img-placeholder comm-img">
+              <span>foto: dupla de treino</span>
+            </div>
 
-            <a
-                href="#"
-                class="btn-outline-dark btn-small"
-            >
-                📍 Como chegar
-            </a>
+            <div class="img-placeholder comm-img">
+              <span>foto: equipe São Jorge</span>
+            </div>
+          </div>
 
+          <button class="arrow arrow-right" aria-label="Próximo">›</button>
         </div>
 
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PATROCINADORES ================= -->
+
+    <section class="patrocinadores" id="patrocinadores">
+      <div class="container">
+        <h3 class="section-title">
+          <span class="line"></span>
+
+          PATROCINADORES
+
+          <span class="line"></span>
+        </h3>
+
+        <div class="carousel">
+          <button class="arrow arrow-left" aria-label="Anterior">‹</button>
+
+          <div class="cards cards-5">
+            <div class="sponsor-logo">
+              <img src="imgs/parceiros/crefisa.png" alt="Crefisa" />
+            </div>
+
+            <div class="sponsor-logo">
+              <img src="imgs/parceiros/fischer-325x170.png" alt="Fischer" />
+            </div>
+
+            <div class="sponsor-logo">
+              <img
+                src="imgs/parceiros/hiperfarma-325x170.png"
+                alt="Hiperfarma"
+              />
+            </div>
+
+            <div class="sponsor-logo">
+              <img src="imgs/parceiros/nupay-325x170.png" alt="Nupay" />
+            </div>
+
+            <div class="sponsor-logo">
+              <img src="imgs/parceiros/starbucks.png" alt="Starbucks" />
+            </div>
+          </div>
+
+          <button class="arrow arrow-right" aria-label="Próximo">›</button>
+        </div>
+
+        <div class="patrocinadores-cta">
+          <p>Quer sua marca aqui também?</p>
+
+          <a href="aderir-patrocinadores.html" class="btn-primary">
+            Seja um patrocinador →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PLANOS ================= -->
+
+    <section class="info-planos" id="planos">
+      <div class="container info-planos-container">
+        <div class="onde-estamos" id="contato">
+          <p class="eyebrow">ONDE ESTAMOS</p>
+
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+
+            <div>
+              <strong>Endereço</strong>
+
+              <p>#####</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🕒</span>
+
+            <div>
+              <strong>Horários</strong>
+
+              <p>#####</p>
+            </div>
+          </div>
+
+          <a href="#" class="btn-outline-dark btn-small"> 📍 Como chegar </a>
+        </div>
 
         <div class="planos">
+          <p class="eyebrow">PLANOS</p>
 
-            <p class="eyebrow">
-                PLANOS
-            </p>
+          <p class="planos-desc">Escolha o plano que combina com você.</p>
 
-            <p class="planos-desc">
-                Escolha o plano que combina com você.
-            </p>
+          <div class="plans-grid">
+            <div
+              class="plan"
+              data-plan="Essencial"
+              tabindex="0"
+              role="button"
+              aria-pressed="false"
+            >
+              <span class="plan-check">✓</span>
 
+              <h4>Essencial</h4>
 
-            <div class="plans-grid">
+              <p class="plan-freq">#####</p>
 
-
-                <div
-                    class="plan"
-                    data-plan="Essencial"
-                    tabindex="0"
-                    role="button"
-                    aria-pressed="false"
-                >
-
-                    <span class="plan-check">✓</span>
-
-                    <h4>Essencial</h4>
-
-                    <p class="plan-freq">
-                        #####
-                    </p>
-
-                    <p class="plan-desc">
-                        Opções de 1 modalidade ou todas as modalidades.
-                    </p>
-
-                </div>
-
-
-                <div
-                    class="plan plan-featured"
-                    data-plan="Premium"
-                    tabindex="0"
-                    role="button"
-                    aria-pressed="false"
-                >
-
-                    <span class="badge">
-                        Mais escolhido
-                    </span>
-
-                    <span class="plan-check">✓</span>
-
-                    <h4>Premium</h4>
-
-                    <p class="plan-freq">
-                        #####
-                    </p>
-
-                    <p class="plan-desc">
-                        Opções de 1 modalidade ou todas as modalidades.
-                    </p>
-
-                </div>
-
-
-                <div
-                    class="plan"
-                    data-plan="Performance"
-                    tabindex="0"
-                    role="button"
-                    aria-pressed="false"
-                >
-
-                    <span class="plan-check">✓</span>
-
-                    <h4>Performance</h4>
-
-                    <p class="plan-freq">
-                        #####
-                    </p>
-
-                    <p class="plan-desc">
-                        Opções de 1 modalidade ou todas as modalidades.
-                    </p>
-
-                </div>
-
+              <p class="plan-desc">
+                Opções de 1 modalidade ou todas as modalidades.
+              </p>
             </div>
-
 
             <div
-                class="planos-cta"
-                id="planosCta"
+              class="plan plan-featured"
+              data-plan="Premium"
+              tabindex="0"
+              role="button"
+              aria-pressed="false"
             >
+              <span class="badge"> Mais escolhido </span>
 
-                <p
-                    class="planos-note"
-                    id="planosNote"
-                >
-                    Clique em um plano acima para escolher.
-                </p>
+              <span class="plan-check">✓</span>
 
+              <h4>Premium</h4>
 
-                <div
-                    class="planos-cta-actions"
-                    id="planosActions"
-                    hidden
-                >
+              <p class="plan-freq">#####</p>
 
-                    <button
-                        type="button"
-                        id="ctaPlano"
-                        class="btn-primary btn-small"
-                    >
-                        💬 Quero esse plano
-                    </button>
-
-                    <button
-                        type="button"
-                        id="ctaAula"
-                        class="btn-outline-dark btn-small"
-                    >
-                        📅 Quero agendar uma aula
-                    </button>
-
-                </div>
-
+              <p class="plan-desc">
+                Opções de 1 modalidade ou todas as modalidades.
+              </p>
             </div>
 
+            <div
+              class="plan"
+              data-plan="Performance"
+              tabindex="0"
+              role="button"
+              aria-pressed="false"
+            >
+              <span class="plan-check">✓</span>
+
+              <h4>Performance</h4>
+
+              <p class="plan-freq">#####</p>
+
+              <p class="plan-desc">
+                Opções de 1 modalidade ou todas as modalidades.
+              </p>
+            </div>
+          </div>
+
+          <div class="planos-cta" id="planosCta">
+            <p class="planos-note" id="planosNote">
+              Clique em um plano acima para escolher.
+            </p>
+
+            <div class="planos-cta-actions" id="planosActions" hidden>
+              <button type="button" id="ctaPlano" class="btn-primary btn-small">
+                💬 Quero esse plano
+              </button>
+
+              <button
+                type="button"
+                id="ctaAula"
+                class="btn-outline-dark btn-small"
+              >
+                📅 Quero agendar uma aula
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= MODAL ================= -->
 
-</section>
-
-
-<!-- ================= MODAL ================= -->
-
-<div
-    class="modal-overlay"
-    id="planModalOverlay"
->
-
-    <div
+    <div class="modal-overlay" id="planModalOverlay">
+      <div
         class="modal-box"
         role="dialog"
         aria-modal="true"
         aria-labelledby="planModalTitle"
-    >
-
+      >
         <button
-            type="button"
-            class="modal-close"
-            id="planModalClose"
-            aria-label="Fechar"
+          type="button"
+          class="modal-close"
+          id="planModalClose"
+          aria-label="Fechar"
         >
-            ×
+          ×
         </button>
 
-        <p
-            class="eyebrow"
-            id="planModalEyebrow"
-        >
-            PLANO SELECIONADO
+        <p class="eyebrow" id="planModalEyebrow">PLANO SELECIONADO</p>
+
+        <h3 id="planModalTitle">Complete seus dados</h3>
+
+        <p class="modal-desc" id="planModalDesc">
+          Preencha as informações abaixo. Vamos abrir o WhatsApp com sua
+          mensagem pronta.
         </p>
 
-        <h3 id="planModalTitle">
-            Complete seus dados
-        </h3>
+        <form id="planForm" class="plan-form" novalidate>
+          <div class="form-row">
+            <label for="planAlunoNome"> Nome do aluno * </label>
 
-        <p
-            class="modal-desc"
-            id="planModalDesc"
-        >
-            Preencha as informações abaixo.
-            Vamos abrir o WhatsApp com sua mensagem pronta.
-        </p>
+            <input
+              type="text"
+              id="planAlunoNome"
+              name="planAlunoNome"
+              placeholder="Nome completo"
+              required
+            />
+          </div>
 
+          <div class="form-row">
+            <label for="planDataInicio"> Dia que pretende começar * </label>
 
-        <form
-            id="planForm"
-            class="plan-form"
-            novalidate
-        >
+            <input
+              type="date"
+              id="planDataInicio"
+              name="planDataInicio"
+              required
+            />
+          </div>
 
-            <div class="form-row">
+          <div class="form-row">
+            <label for="planTelefone"> Telefone / WhatsApp </label>
 
-                <label for="planAlunoNome">
-                    Nome do aluno *
-                </label>
+            <input
+              type="tel"
+              id="planTelefone"
+              name="planTelefone"
+              placeholder="(11) 90000-0000"
+            />
+          </div>
 
-                <input
-                    type="text"
-                    id="planAlunoNome"
-                    name="planAlunoNome"
-                    placeholder="Nome completo"
-                    required
-                >
+          <p class="sponsor-feedback" id="planFormFeedback" hidden></p>
 
-            </div>
-
-
-            <div class="form-row">
-
-                <label for="planDataInicio">
-                    Dia que pretende começar *
-                </label>
-
-                <input
-                    type="date"
-                    id="planDataInicio"
-                    name="planDataInicio"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-row">
-
-                <label for="planTelefone">
-                    Telefone / WhatsApp
-                </label>
-
-                <input
-                    type="tel"
-                    id="planTelefone"
-                    name="planTelefone"
-                    placeholder="(11) 90000-0000"
-                >
-
-            </div>
-
-
-            <p
-                class="sponsor-feedback"
-                id="planFormFeedback"
-                hidden
-            ></p>
-
-
-            <button
-                type="submit"
-                class="btn-primary plan-form-submit"
-            >
-                Enviar para o WhatsApp →
-            </button>
-
+          <button type="submit" class="btn-primary plan-form-submit">
+            Enviar para o WhatsApp →
+          </button>
         </form>
-
+      </div>
     </div>
 
-</div>
+    <!-- ================= FOOTER ================= -->
 
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="container footer-container">
-
-
+    <footer class="footer">
+      <div class="container footer-container">
         <div class="footer-brand">
+          <div class="footer-logo">
+            <img
+              src="imgs/logo_transparent.png"
+              alt="São Jorge Training Club"
+              class="footer-logo-img"
+            />
 
-            <div class="footer-logo">
+            <span class="logo-text">
+              TREINE.<br />
+              EVOLUA.<br />
 
-                <img
-                    src="imgs/logo_transparent.png"
-                    alt="São Jorge Training Club"
-                    class="footer-logo-img"
-                >
-
-                <span class="logo-text">
-
-                    TREINE.<br>
-                    EVOLUA.<br>
-
-                    <em>PERTENÇA.</em>
-
-                </span>
-
-            </div>
-
+              <em>PERTENÇA.</em>
+            </span>
+          </div>
         </div>
-
 
         <div class="footer-col">
+          <strong> Institucional </strong>
 
-            <strong>
-                Institucional
-            </strong>
+          <a href="#sao-jorge"> O São Jorge </a>
 
-            <a href="#sao-jorge">
-                O São Jorge
-            </a>
+          <a href="#diferenciais"> Diferenciais </a>
 
-            <a href="#diferenciais">
-                Diferenciais
-            </a>
+          <a href="#comunidade"> Comunidade </a>
 
-            <a href="#comunidade">
-                Comunidade
-            </a>
+          <a href="#contato"> Contato </a>
 
-            <a href="#contato">
-                Contato
-            </a>
-
-            <a href="aderir-patrocinadores.html">
-                Seja um patrocinador
-            </a>
-
+          <a href="aderir-patrocinadores.html"> Seja um patrocinador </a>
         </div>
-
 
         <div class="footer-col">
+          <strong> Modalidades </strong>
 
-            <strong>
-                Modalidades
-            </strong>
+          <a href="#modalidades"> Cross </a>
 
-            <a href="#modalidades">
-                Cross
-            </a>
+          <a href="#modalidades"> HYROX </a>
 
-            <a href="#modalidades">
-                HYROX
-            </a>
+          <a href="#modalidades"> HIIT </a>
 
-            <a href="#modalidades">
-                HIIT
-            </a>
-
-            <a href="#modalidades">
-                Running
-            </a>
-
+          <a href="#modalidades"> Running </a>
         </div>
-
 
         <div class="footer-col">
+          <strong> Fale conosco </strong>
 
-            <strong>
-                Fale conosco
-            </strong>
+          <a href="https://wa.me/5511975967226" target="_blank" rel="noopener">
+            📞 (11) 97596-7226
+          </a>
 
-            <a
-                href="https://wa.me/5511975967226"
-                target="_blank"
-                rel="noopener"
-            >
-                📞 (11) 97596-7226
-            </a>
-
-            <a href="#">
-                @saojorgetrainingclub
-            </a>
-
+          <a href="#"> @saojorgetrainingclub </a>
         </div>
+      </div>
 
-    </div>
-
-
-    <div class="container footer-bottom">
+      <div class="container footer-bottom">
+        <p>© 2026 Marlon Santos. Todos os direitos reservados.</p>
 
         <p>
-            © 2026 Marlon Santos.
-            Todos os direitos reservados.
+          Desenvolvido por Marlon Santos ·
+          <a href="mailto:marlons960@gmail.com"> marlons960@gmail.com </a>
         </p>
+      </div>
+    </footer>
 
-        <p>
-            Desenvolvido por Marlon Santos ·
-            <a href="mailto:marlons960@gmail.com">
-                marlons960@gmail.com
-            </a>
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
