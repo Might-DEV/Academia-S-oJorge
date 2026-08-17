@@ -20,8 +20,5 @@ Landing Page moderna e responsiva desenvolvida para o São Jorge Training Club, 
 ## 📱 Objetivo
 Este projeto foi desenvolvido como parte do meu portfólio de Front-End, aplicando boas práticas de HTML semântico, CSS moderno e organização de código.
 
-## 📷 Preview
-*(adicione um print do site aqui)*
-
 ## 👨‍💻 Desenvolvido por
 Marlon Santos
